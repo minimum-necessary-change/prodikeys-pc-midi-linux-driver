@@ -1,0 +1,52 @@
+Common subdirectories: pcmidi-controller.orig/bin and pcmidi-controller/bin
+diff -uw pcmidi-controller.orig/Makefile pcmidi-controller/Makefile
+--- pcmidi-controller.orig/Makefile	2010-04-26 10:53:22.000000000 +0100
++++ pcmidi-controller/Makefile	2013-11-26 13:52:30.144418567 +0000
+@@ -4,7 +4,7 @@
+ 
+ SHELL = /bin/bash
+ INSTALL = /usr/local/bin/install -c
+-bindir= /usrlocal/bin
++bindir= /usr/local/bin
+ 
+ 
+ DEBUG = 0
+Common subdirectories: pcmidi-controller.orig/obj and pcmidi-controller/obj
+diff -uw pcmidi-controller.orig/pcmidi_controllerApp.cpp pcmidi-controller/pcmidi_controllerApp.cpp
+--- pcmidi-controller.orig/pcmidi_controllerApp.cpp	2010-04-26 10:53:22.000000000 +0100
++++ pcmidi-controller/pcmidi_controllerApp.cpp	2013-11-26 13:52:38.032551225 +0000
+@@ -51,11 +51,11 @@
+         }
+     }
+ 
+-    wxString msg = "\nProdikeys PC-MIDI Keyboard helper application\n\n";
+-    msg += "Copyright Don Prince (c) 2009\n\n";
+-    msg += "License: GNU General Public License (version 2 or later)\n\n\n";
++    wxString msg = _T("\nProdikeys PC-MIDI Keyboard helper application\n\n");
++    msg += _T("Copyright Don Prince (c) 2009\n\n");
++    msg += _T("License: GNU General Public License (version 2 or later)\n\n\n");
+     msg += wxbuildinfo(long_f);
+-    wxMessageBox(msg, _("Device not found...Aborting"),wxICON_ERROR | wxCENTRE);
++    wxMessageBox(msg, _T("Device not found...Aborting"),wxICON_ERROR | wxCENTRE);
+ 
+     return false;
+ }
+diff -uw pcmidi-controller.orig/pcmidi_controllerMain.cpp pcmidi-controller/pcmidi_controllerMain.cpp
+--- pcmidi-controller.orig/pcmidi_controllerMain.cpp	2010-04-26 10:53:22.000000000 +0100
++++ pcmidi-controller/pcmidi_controllerMain.cpp	2013-11-26 13:52:44.760664367 +0000
+@@ -100,11 +100,11 @@
+ 
+ void pcmidi_controllerDialog::OnAbout(wxCommandEvent &event)
+ {
+-    wxString msg = "\nProdikeys PC-MIDI Keyboard helper application\n\n";
+-    msg += "Copyright Don Prince (c) 2009\n\n";
+-    msg += "License: GNU General Public License (version 2 or later)\n\n\n";
++    wxString msg = _T("\nProdikeys PC-MIDI Keyboard helper application\n\n");
++    msg += _T("Copyright Don Prince (c) 2009\n\n");
++    msg += _T("License: GNU General Public License (version 2 or later)\n\n\n");
+     msg += wxbuildinfo(long_f);
+-    wxMessageBox(msg, _("Welcome to..."));
++    wxMessageBox(msg, _T("Welcome to..."));
+ }
+ 
+ void pcmidi_controllerDialog::OnCbSustainNotesMode( wxCommandEvent& event )

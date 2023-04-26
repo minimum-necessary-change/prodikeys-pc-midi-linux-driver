@@ -1,0 +1,7 @@
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/hid-core.c b/drivers/hid/hid-core.c
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/hid-creativelabs.c b/drivers/hid/hid-creativelabs.c
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/hid-creativelabs.h b/drivers/hid/hid-creativelabs.h
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/hid-ids.h b/drivers/hid/hid-ids.h
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/hid-pcmidi.c b/drivers/hid/hid-pcmidi.c
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/Kconfig b/drivers/hid/Kconfig
+diff -X /opt/scripts/diff-exclude.txt -Npaur a/drivers/hid/Makefile b/drivers/hid/Makefile

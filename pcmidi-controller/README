@@ -1,0 +1,50 @@
+#########################################################
+Prodikeys PC-MIDI Controller Application
+#########################################################
+Copyright Don Prince (c) 2009
+
+License: GPL_V2 (for details, see LICENSE file)
+
+https://sourceforge.net/projects/pc-midi-linux/
+----------------------------------------------------------
+
+This application allows control of special features of the 
+Prodikeys PC-MIDI USB keyboard. It communicates with the
+driver via sysfs. The features are as follows
+
+1. Octave shift
+    The octave can be shifted up or down 2 octaves.
+    
+2. Note Sustain:
+    Notes can be sustained for up to 5 secs.
+    
+3. Transmit channel:
+    The keyboard can be set to transmit on channels 1-16.
+
+A standard Makefile and IDE workspaces for CodeBlocks and 
+wxFormbuilder are included in this source release.
+
+Depends on packages:
+	libwxgtk2.8
+	libsysfs-static-devel
+
+
+To build:
+    make
+    
+To install:
+    make install
+
+To run:
+
+    from build directory
+    	    cd bin/Release
+	    ./pcmidi-controller&
+
+    from install directory (default: /usr/local/bin)
+	pcmidi-controller
+
+A debug version can be built by editing the makefile and
+setting DEBUG variable to 1 e.g.
+    DEBUG = 1
+The debug version will be placed in bin/Debug directory.

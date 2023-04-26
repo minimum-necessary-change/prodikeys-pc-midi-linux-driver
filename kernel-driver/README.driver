@@ -1,0 +1,55 @@
+=====================================
+Prodikeys PC_MIDI Linux Driver README
+=====================================
+
+Instructions:
+-------------------------------------
+
+The driver is in patch format and will require you to patch and rebuild your kernel.
+
+Various patched are avaliable for different kernel versions currently v2.6.29 to v2.6.34.
+
+1. Acquire and unpack the kernel in source format, via SRPM, tar, GIT, etc.
+
+2. Enter your kernel source directory.
+
+        cd <path to your kernel source>
+
+3. Test the  kernel patch
+
+	patch -p1 --dry-run < <path to patch that matches your kernel version>
+
+   If the patch test is successful then apply the patch
+
+	patch -p1 < <path to patch that matches your kernel version>
+
+4. Prepare the kernel for building.
+
+	make mrproper
+
+5. Configure your kernel
+
+   If you wish to configure from scatch then
+
+	make menuconfig 
+
+   or if you have a previous configured ".config" file,
+
+	make oldconfig
+
+6. Build your kernel
+
+	make
+
+   If "make" produced no errors then install the kernel modules
+
+	make modules_install
+
+   If "make modules_install" produced no error then install the kernel
+
+	make install
+
+7. Reboot into the new kernel. The PC-MIDI keyboard should be detected when connected via USB.
+
+8. Should you have problems patching and building a kernel then google really is your friend.
+
